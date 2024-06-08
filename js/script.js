@@ -79,7 +79,7 @@ function displayProduct(arr) {
             <h6 class="card-text">${arr[i].category}</h6>
             <p class="card-text"><small class="text-body-secondary">${
               arr[i].price
-            }</small></p>
+            }<b>$</b></small></p>
             <div>
               <a href="#form" class="btn btn-success" onclick="editProduct(${
                 arr[i].id
@@ -161,7 +161,7 @@ function searchProduct(text) {
 function validateFormInputs(ele) {
   var regex = {
     productTitle: /[A-Z][a-z]{2,10}/,
-    productPrice: /^(100|[1-4]\d{2}(\.\d{1,2})?|500$)/,
+    productPrice: /^(100|[1-4]\d{2}|500)(\.\d{1,2})?$/,
     productCategory:
       /(Lollypops|Gummi Candy|Hard Candy|Suger Gummi Candy|Chocolate Candy)/,
     productDescription: /^[a-zA-Z]{5,250}$/,
