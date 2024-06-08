@@ -14,6 +14,8 @@ var productIDKey = "productIDCounter";
 var allProducts = JSON.parse(localStorage.getItem(localProduct)) || [];
 var productIDCounter = parseInt(localStorage.getItem(productIDKey)) || 0;
 
+const form = document.getElementsByTagName("form")[0];
+
 displayProduct(allProducts);
 
 function addProduct() {
@@ -39,6 +41,11 @@ function addProduct() {
     clearInputs();
   }
 }
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  addProduct();
+});
 
 function addToLocalStorage() {
   localStorage.setItem(localProduct, JSON.stringify(allProducts));
