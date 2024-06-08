@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toffe Store</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- <header
+      id="home"
+      class="header vh-100"
+      style="
+        background-image: url(/fruityCandyImages/top-view-frame-with-cereals-bowl-copy-space.jpg);
+        background-position: 0px 0px;
+        background-size: cover;
+      "
+    >
+      <div
+        class="container h-100 d-flex flex-column align-items-start justify-content-center"
+      >
+        <h2 class="fs-1">Welcome To My Candy Shop</h2>
+        <p class="w-50">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          soluta odit illo!
+        </p>
+      </div>
+    </header> -->
+    <section>
+      <div class="container pt-5">
+      <form id="form" class="row g-3 bt-5  needs-validation" novalidate>
+      
+          <div class="w-75 mx-auto form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="productTitle"
+              placeholder="Product Title"
+              oninput="validateFormInputs(this)"
+            />
+            <span class="text-danger d-none">Title should start with uppercase letter.</span>
+            <label for="productTitle">Product Title</label>
+          </div>
+          <div class="w-75 mx-auto form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="productPrice"
+              placeholder="Product Price"
+              oninput="validateFormInputs(this)"
+            />
+            <span class="text-danger d-none">Price should be in range(100-500).</span>
+            <label for="productPrice">Product Price</label>
+          </div>
+          <div class="w-75 mx-auto form-floating mb-3">
+            <input
+            list="categories"
+              type="text"
+              class="form-control"
+              id="productCategory"
+              placeholder="Product Category"
+              oninput="validateFormInputs(this)"
+            />
+            <span class="text-danger d-none">Select one of the following categories.</span>
+
+            <label for="productCategory">Product Category</label>
+            <datalist id="categories">
+              <option value="Lollypops"></option>
+              <option value="Gummi Candy"></option>
+              <option value="Hard Candy"></option>
+              <option value="Suger Gummi Candy"></option>
+              <option value="Chocolate Candy"></option>
+            </datalist>
+          </div>
+          <div class="w-75 mx-auto form-floating mb-3">
+            <input
+              type="file"
+              accept="image/jpeg"
+              class="form-control"
+              id="productImage"
+              placeholder="Product Image"
+              oninput="validateFormInputs(this)"
+            />
+            <span class="text-danger d-none">Must upload an image</span>
+            <label for="productImage">Product Image</label>
+          </div>
+          <div class="w-75 mx-auto form-floating mb-3">
+            <textarea
+              type="text"
+              class="form-control"
+              id="productDescription"
+              placeholder="Product Description"
+              oninput="validateFormInputs(this)"
+            ></textarea>
+            <span class="text-danger d-none">Description must be less than 250 characters.</span>
+            <label for="productDescription">Product Description</label>
+          </div>
+          <div class="w-75 mx-auto pb-3">
+            <button id="addBtn" class="btn addedButton" type="submit" onclick="addProduct()">Submit</button>
+            <button id="updateBtn" class="btn updatedButton d-none" type="button" onclick="updateProduct()">Update Product</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    
+    </section>
+    <section>
+      <div class="container">
+        <div class="w-75 mx-auto">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="productSearch"
+              placeholder="Product Search"
+              oninput="searchProduct(this.value)"
+            />
+            <label for="productSearch">Product Search</label>
+          </div>
+          <div class="row" id="productRow"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div id="imageAlert" class="alert w-25 mx-auto d-none">
+          <p class="text-danger" id="alertMessage"></p>
+          <button class="btn btn-success" onclick="hideAlert()">Ok</button>
+        </div>
+      </div>
+    </section>
+
+
+    <script
+      src="https://kit.fontawesome.com/7ec47829ba.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
