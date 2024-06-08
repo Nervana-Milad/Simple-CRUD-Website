@@ -2,6 +2,12 @@ body {
   background-color: #d8e7ea;
 }
 
+.bg-image {
+  background-image: url(../fruityCandyImages/top-view-frame-with-cereals-bowl-copy-space.jpg);
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
 .addedButton {
   background-color: #f6898e;
 }
